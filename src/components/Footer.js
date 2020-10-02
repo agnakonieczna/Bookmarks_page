@@ -1,27 +1,26 @@
 import React from "react";
-import logo from "../assets/images/logo-bookmark.svg";
-
+import logo from "../assets/images/reversed-logo.svg";
 
 function Footer() {
-    return (
-        <>
-        <img src={logo}></img>
-        <ul className='nav__list'>
-        <li className='nav__list__item'>
-          <a href='#features'>Features</a>
+  return (
+    <footer className='footer'>
+      <img src={logo} alt='company-logo'></img>
+      <ul className='nav__list'>
+        <li className='nav__item'>
+          <a className='nav__link' href='#features'>Features</a>
         </li>
-        <li className='nav__list__item'>
-          <a href='#pricing'>Pricing</a>
+        <li className='nav__item'>
+          <a className='nav__link' href='#pricing'>Pricing</a>
         </li>
-        <li className='nav__list__item'>
-          <a href='#contact'>Contact</a>
+        <li className='nav__item'>
+          <a className='nav__link' href='#contact'>Contact</a>
         </li>
-        <li className='nav__list__item'>
-          <a href='#login'>Login</a>
+        <li className='nav__item'>
+          <a className='nav__link' href='#login'>Login</a>
         </li>
       </ul>
-      </>
-    )
+    </footer>
+  );
 }
 
 export default Footer;

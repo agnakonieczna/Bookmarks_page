@@ -6,18 +6,16 @@ function Baner() {
     <>
       <section className='banner'>
         <img className='banner_hero' src={baner} alt='company-logo' />
-          <h1>A simple Bookmark Manager</h1>
-          <p>
+        <div className='banner_content'>
+          <h1 className='banner__title'>A Simple Bookmark Manager</h1>
+          <p className='banner__text'>
             A clean and simple interface to organize your favourite websites.
             Open a new browser taband see your sites load instantly. Try it for
             free.
           </p>
-          <button>
-            Get it on Chrome
-          </button>
-          <button>
-            Get it on Firefox
-          </button>
+          <button className='banner__btn banner__btn-1'>Get it on Chrome</button>
+          <button className='banner__btn banner__btn-2'>Get it on Firefox</button>
+        </div>
       </section>
     </>
   );

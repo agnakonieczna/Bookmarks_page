@@ -30,27 +30,28 @@ class Features extends React.Component {
     return (
       <>
         <section className='features' id='features'>
-          <h2>Features</h2>
-          <p>
+          <h3 className='features__title'>Features</h3>
+          <p className='features__text'>
             Our aim is to make quick and easy for you to access your favourite
             websites. Your bookmarks sync between your devices so you can access
             them on the go.
           </p>
-          <button
+          <button className='features__btn'
             onClick={() => {
               this.setState({ btn1: true, btn2: false, btn3: false });
             }}
           >
             Simple bookmarking
           </button>
-          <button
+          {this.state.btn1 && <span className='red-line'></span>}
+          <button className='features__btn'
             onClick={() => {
               this.setState({ btn1: false, btn2: true, btn3: false });
             }}
           >
             Speedy searching
           </button>
-          <button
+          <button className='features__btn'
             onClick={() => {
               this.setState({ btn1: false, btn2: false, btn3: true });
             }}

@@ -1,0 +1,21 @@
+.extensions {
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.extension__title {
+    margin-bottom: 1rem;
+}
+
+.extension__text {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    color: $addtional-color-1;
+    line-height: 1.5;
+}
+
+.extension__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

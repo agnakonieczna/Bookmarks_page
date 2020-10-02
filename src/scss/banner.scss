@@ -1,18 +1,37 @@
 .banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .banner_hero {
-    width: 95%;
+  width: 100%;
 }
 
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.banner_content {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.banner__title {
+  margin-bottom: 1rem;
+}
+
+.banner__text {
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  color: $addtional-color-1;
+}
+
+.banner__btn {
+  @include main-btn;
+  margin: 0.5rem 0.5rem;
+}
+
+.banner__btn-2 {
+  background-color: lighten($addtional-color-1, 30%);
+  color: darken($addtional-color-1, 10%);
+  box-shadow: 5px 5px 5px 0px rgba(212, 212, 212, 1);
 }
