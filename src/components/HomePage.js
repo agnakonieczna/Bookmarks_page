@@ -9,15 +9,15 @@ import Footer from "./Footer";
 
 function HomePage() {
   return (
-    <div className='container'>
+    <>
       <Header />
       <Baner />
       <Features />
       <Extensions />
       <FAQ />
-      <Newsletter/>
+      <Newsletter />
       <Footer />
-    </div>
+    </>
   );
 }
 

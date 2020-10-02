@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo-bookmark.svg";
+import reversedLogo from "../assets/images/reversed-logo.svg";
 import hamburgerOpen from "../assets/images/icon-hamburger.svg";
 import hamburgerClose from "../assets/images/icon-close.svg";
 import facebook from "../assets/images/icon-facebook.svg";
@@ -11,6 +12,7 @@ class Header extends React.Component {
     this.state = {
       btnIcon: hamburgerOpen,
       showMenu: false,
+      logo: logo,
     };
   }
 
@@ -19,6 +21,7 @@ class Header extends React.Component {
       btnIcon:
         this.state.btnIcon === hamburgerOpen ? hamburgerClose : hamburgerOpen,
       showMenu: this.state.showMenu ? false : true,
+      logo: this.state.logo === logo ? reversedLogo : logo,
     });
   };
 
@@ -26,50 +29,48 @@ class Header extends React.Component {
     return (
       <>
         <header
-          className={this.state.showMenu ? "header header-show" : "header"}
+          className='header'
         >
-          <div className='header__row'>
-            <img
-              className='logo'
-              src={logo}
-              alt='company-logo'
-            />
-            <button className='hamburger' onClick={this.showMenu}>
-              <img src={this.state.btnIcon} alt='menu'></img>
-            </button>
-          </div>
-          <nav className={this.state.showMenu ? "nav show" : "nav"}>
-            <ul className='nav__list'>
-              <li className='nav__item'>
-                <a href='#features' className='nav__link'>
-                  Features
-                </a>
-              </li>
-              <li className='nav__item'>
-                <a href='#pricing' className='nav__link'>
-                  Pricing
-                </a>
-              </li>
-              <li className='nav__item'>
-                <a href='#contact' className='nav__link'>
-                  Contact
-                </a>
-              </li>
-              <li className='nav__item'>
-                <a href='#login' className='nav__link'>
-                  Login
-                </a>
-              </li>
-            </ul>
-            <div className='nav__links'>
-              <a href='https://www.facebook.com/'>
-                <img src={facebook} alt='facebook-icon'/>
-              </a>
-              <a href='https://twitter.com/'>
-                <img src={twitter} alt='twitter-icon'/>
-              </a>
+          <div className='container'>
+            <div className='header__row'>
+              <img className='logo' src={this.state.logo} alt='company-logo' />
+              <button className='hamburger' onClick={this.showMenu}>
+                <img src={this.state.btnIcon} alt='menu'></img>
+              </button>
             </div>
-          </nav>
+            <nav className={this.state.showMenu ? "nav show" : "nav"}>
+              <ul className='nav__list'>
+                <li className='nav__item'>
+                  <a href='#features' className='nav__link'>
+                    Features
+                  </a>
+                </li>
+                <li className='nav__item'>
+                  <a href='#pricing' className='nav__link'>
+                    Pricing
+                  </a>
+                </li>
+                <li className='nav__item'>
+                  <a href='#contact' className='nav__link'>
+                    Contact
+                  </a>
+                </li>
+                <li className='nav__item'>
+                  <a href='#login' className='nav__link'>
+                    Login
+                  </a>
+                </li>
+              </ul>
+              <div className='nav__links'>
+                <a href='https://www.facebook.com/'>
+                  <img src={facebook} alt='facebook-icon' />
+                </a>
+                <a href='https://twitter.com/'>
+                  <img src={twitter} alt='twitter-icon' />
+                </a>
+              </div>
+            </nav>
+          </div>
         </header>
       </>
     );

@@ -30,6 +30,7 @@ class Features extends React.Component {
     return (
       <>
         <section className='features' id='features'>
+        <div className='container'>
           <h3 className='features__title'>Features</h3>
           <p className='features__text'>
             Our aim is to make quick and easy for you to access your favourite
@@ -79,6 +80,7 @@ class Features extends React.Component {
               text={this.state.text3}
             />
           )}
+          </div>
         </section>
       </>
     );

@@ -3,7 +3,7 @@ import logo from "../assets/images/reversed-logo.svg";
 
 function Footer() {
   return (
-    <footer className='footer'>
+    <footer className='footer' id='contact'>
       <img src={logo} alt='company-logo'></img>
       <ul className='nav__list'>
         <li className='nav__item'>

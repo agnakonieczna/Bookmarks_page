@@ -33,22 +33,24 @@ class Features extends React.Component {
     return (
       <>
         <section className='extensions' id='pricing'>
-          <h3 className='extension__title'>Download the extensions</h3>
-          <p className='extension__text'>
-            We've got more browsers in the pipeline. Please do let us know if
-            you've got a favourite you'd like us to priortize.
-          </p>
-          <div className='extension__container'>
-            {this.state.map((extension) => {
-              return (
-                <OneExtension
-                  key={extension.id}
-                  img={extension.img}
-                  title={extension.title}
-                  text={extension.text}
-                />
-              );
-            })}
+          <div className='container'>
+            <h3 className='extension__title'>Download the extensions</h3>
+            <p className='extension__text'>
+              We've got more browsers in the pipeline. Please do let us know if
+              you've got a favourite you'd like us to priortize.
+            </p>
+            <div className='extension__container'>
+              {this.state.map((extension) => {
+                return (
+                  <OneExtension
+                    key={extension.id}
+                    img={extension.img}
+                    title={extension.title}
+                    text={extension.text}
+                  />
+                );
+              })}
+            </div>
           </div>
         </section>
       </>
