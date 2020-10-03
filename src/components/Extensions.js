@@ -7,26 +7,28 @@ import OneExtension from "./OneExtension";
 class Features extends React.Component {
   constructor(props) {
     super();
-    this.state = [
-      {
-        id: 1,
-        img: img1,
-        title: "Add to Chrome",
-        text: "Minimum version 62",
-      },
-      {
-        id: 2,
-        img: img2,
-        title: "Add to Firefox",
-        text: "Minimum version 55",
-      },
-      {
-        id: 3,
-        img: img3,
-        title: "Add to Opera",
-        text: "Minimum version 46",
-      },
-    ];
+    this.state = {
+      data: [
+        {
+          id: 1,
+          img: img1,
+          title: "Add to Chrome",
+          text: "Minimum version 62",
+        },
+        {
+          id: 2,
+          img: img2,
+          title: "Add to Firefox",
+          text: "Minimum version 55",
+        },
+        {
+          id: 3,
+          img: img3,
+          title: "Add to Opera",
+          text: "Minimum version 46",
+        },
+      ],
+    };
   }
 
   render() {
@@ -40,7 +42,7 @@ class Features extends React.Component {
               you've got a favourite you'd like us to priortize.
             </p>
             <div className='extension__container'>
-              {this.state.map((extension) => {
+              {this.state.data.map((extension) => {
                 return (
                   <OneExtension
                     key={extension.id}

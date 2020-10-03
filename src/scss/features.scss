@@ -1,44 +1,68 @@
 .features {
-    width: 100%;
-    padding-top: 6rem;
-    text-align: center;
+  width: 100%;
+  padding-top: 6rem;
+  text-align: center;
+}
+
+.features__content {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .features__title {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .features__text {
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
-    color: $addtional-color-1;
-    line-height: 1.5;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  color: $addtional-color-1;
+  line-height: 1.5;
 }
 
 .features__btn {
-    width: 100%;
-    border: none;
-    border-bottom: 0.01rem solid $addtional-color-1;
-    border-top: 0.01rem solid $addtional-color-1;
-    background-color: transparent;
-    padding: 0.75rem 0;
-    font-family: 'Rubik';
-    font-weight: 500;
-    color: darken($addtional-color-1, 20%);
-    outline: none;
-}
-
-.features__btn:nth-of-type(2) {
-    border-bottom: none;
-    border-top: none;
+  width: 100%;
+  border: none;
+  border-top: 0.01rem solid $addtional-color-1;
+  background-color: transparent;
+  padding: 0.75rem 0;
+  font-family: "Rubik";
+  font-weight: 500;
+  color: darken($addtional-color-1, 20%);
+  outline: none;
 }
 
 .features__btn:last-of-type {
-    margin-bottom: 3rem;
+  border-bottom: 0.01rem solid $addtional-color-1;
 }
 
 .red-line {
-    // display: inline-block;
-    // border-bottom: 0.2rem solid $main-color-2;
-    // width: 50%;
+  display: block;
+  border-bottom: 0.2rem solid $main-color-2;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+@media (min-width: 1150px) {
+  .features__btn {
+    width: 25%;
+    border: none;
+    border-bottom: 0.01rem solid $addtional-color-1;
+    position: relative;
+    font-size: 1rem;
+  }
+
+  .features__title {
+    font-size: 2rem;
+  }
+  
+  .features__text {
+    font-size: 1rem;
+  }
+
+  .red-line {
+    display: none;
+  }
 }

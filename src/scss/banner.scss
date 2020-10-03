@@ -6,12 +6,13 @@
   flex-direction: column;
 }
 
-.banner_hero {
+.banner__hero {
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
-.banner_content {
+.banner__content {
+  max-width: 25rem;
   text-align: center;
   line-height: 1.5;
 }
@@ -35,4 +36,44 @@
   background-color: lighten($addtional-color-1, 30%);
   color: darken($addtional-color-1, 10%);
   box-shadow: 5px 5px 5px 0px rgba(212, 212, 212, 1);
+}
+
+@media (min-width: 1150px) {
+  .banner {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
+
+  .banner__content {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: start;
+  }
+
+  .banner__hero {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0;
+  }
+
+  .banner__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .banner__text {
+    font-size: 1rem;
+  }
+
+  .banner__btn:first-of-type {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  .banner__btn:last-of-type {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
 }

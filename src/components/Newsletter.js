@@ -50,6 +50,7 @@ class Newsletter extends React.Component {
               type='text'
               value={this.state.email}
               onChange={(e) => this.setState({ email: e.target.value })}
+              placeholder='Enter your email address'
             ></input>
             {this.state.emailErr && (
               <div className='newsletter__error'>

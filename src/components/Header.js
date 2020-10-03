@@ -28,9 +28,7 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <header
-          className='header'
-        >
+        <header className='header'>
           <div className='container'>
             <div className='header__row'>
               <img className='logo' src={this.state.logo} alt='company-logo' />

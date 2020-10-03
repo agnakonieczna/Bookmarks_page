@@ -2,3 +2,15 @@ body {
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
 }
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  @media (min-width: 1150px) {
+    .container {
+      padding: 0 10rem;
+    }
+  }

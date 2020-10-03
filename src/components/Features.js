@@ -30,35 +30,43 @@ class Features extends React.Component {
     return (
       <>
         <section className='features' id='features'>
-        <div className='container'>
-          <h3 className='features__title'>Features</h3>
-          <p className='features__text'>
-            Our aim is to make quick and easy for you to access your favourite
-            websites. Your bookmarks sync between your devices so you can access
-            them on the go.
-          </p>
-          <button className='features__btn'
-            onClick={() => {
-              this.setState({ btn1: true, btn2: false, btn3: false });
-            }}
-          >
-            Simple bookmarking
-          </button>
-          {this.state.btn1 && <span className='red-line'></span>}
-          <button className='features__btn'
-            onClick={() => {
-              this.setState({ btn1: false, btn2: true, btn3: false });
-            }}
-          >
-            Speedy searching
-          </button>
-          <button className='features__btn'
-            onClick={() => {
-              this.setState({ btn1: false, btn2: false, btn3: true });
-            }}
-          >
-            Easy sharing
-          </button>
+          <div className='container'>
+            <div className='features__content'>
+              <h3 className='features__title'>Features</h3>
+              <p className='features__text'>
+                Our aim is to make quick and easy for you to access your
+                favourite websites. Your bookmarks sync between your devices so
+                you can access them on the go.
+              </p>
+            </div>
+            <button
+              className='features__btn'
+              onClick={() => {
+                this.setState({ btn1: true, btn2: false, btn3: false });
+              }}
+            >
+              Simple bookmarking
+            </button>
+            {this.state.btn1 && <span className='red-line'></span>}
+            <button
+              className='features__btn'
+              onClick={() => {
+                this.setState({ btn1: false, btn2: true, btn3: false });
+              }}
+            >
+              Speedy searching
+            </button>
+            {this.state.btn2 && <span className='red-line'></span>}
+            <button
+              className='features__btn'
+              onClick={() => {
+                this.setState({ btn1: false, btn2: false, btn3: true });
+              }}
+            >
+              Easy sharing
+            </button>
+            {this.state.btn3 && <span className='red-line'></span>}
+          </div>
           {this.state.btn1 && (
             <OneFeature
               img={this.state.img1}
@@ -80,7 +88,6 @@ class Features extends React.Component {
               text={this.state.text3}
             />
           )}
-          </div>
         </section>
       </>
     );

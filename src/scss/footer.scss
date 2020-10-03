@@ -1,3 +1,48 @@
 .footer {
     background-color: $addtional-color-2;
 }
+
+.footer__logo {
+    padding-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.footer__item {
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.75;
+    font-size: 0.85rem;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer__links img {
+    width: 1.25rem;
+}
+
+
+.footer__links a:first-child {
+    margin-right: 1rem;
+  }
+  
+  .footer__links a:last-child {
+    margin-left: 1rem;
+  }

@@ -5,10 +5,9 @@ function Baner() {
   return (
     <>
       <section className='banner'>
-      <img className='banner_hero' src={baner} alt='company-logo' />
-
+        <img className='banner__hero' src={baner} alt='company-logo' />
         <div className='container'>
-          <div className='banner_content'>
+          <div className='banner__content'>
             <h1 className='banner__title'>A Simple Bookmark Manager</h1>
             <p className='banner__text'>
               A clean and simple interface to organize your favourite websites.

@@ -30,9 +30,15 @@
     border-radius: 0.25rem;
 }
 
+.newsletter__input::placeholder {
+    font-family: 'Rubik';
+    color: $addtional-color-1;
+    padding-left: 1rem;
+}
+
 .newsletter__input-error {
     border: 0.1rem solid $main-color-2; 
-    background: url(../assets/images/icon-error.svg) no-repeat 14rem 0.3rem;
+    background: url(../assets/images/icon-error.svg) no-repeat 95% 0.3rem;
     background-color: #fff;
 }
 
