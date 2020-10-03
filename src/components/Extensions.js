@@ -4,7 +4,7 @@ import img2 from "../assets/images/logo-firefox.svg";
 import img3 from "../assets/images/logo-opera.svg";
 import OneExtension from "./OneExtension";
 
-class Features extends React.Component {
+class Extensions extends React.Component {
   constructor(props) {
     super();
     this.state = {
@@ -34,13 +34,15 @@ class Features extends React.Component {
   render() {
     return (
       <>
-        <section className='extensions' id='pricing'>
+        <section className='extension' id='pricing'>
           <div className='container'>
-            <h3 className='extension__title'>Download the extensions</h3>
-            <p className='extension__text'>
-              We've got more browsers in the pipeline. Please do let us know if
-              you've got a favourite you'd like us to priortize.
-            </p>
+            <div className='extension__content'>
+              <h3 className='extension__title'>Download the extensions</h3>
+              <p className='extension__text'>
+                We've got more browsers in the pipeline. Please do let us know
+                if you've got a favourite you'd like us to priortize.
+              </p>
+            </div>
             <div className='extension__container'>
               {this.state.data.map((extension) => {
                 return (
@@ -60,4 +62,4 @@ class Features extends React.Component {
   }
 }
 
-export default Features;
+export default Extensions;

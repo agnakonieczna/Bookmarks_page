@@ -147,11 +147,12 @@
       background-color: #fff;
       transition: 0.5s;
       border: 0.05rem solid $main-color-2;
+      color: $main-color-2;
     }
   }
 
   .nav__item:last-child a {
-    color: #fff;
+    // color: #fff;
 
     &:hover {
       color: $main-color-2;

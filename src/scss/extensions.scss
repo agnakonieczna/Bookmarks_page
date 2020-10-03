@@ -1,6 +1,12 @@
-.extensions {
+.extension {
     text-align: center;
     padding-top: 6rem;
+}
+
+.extension__content {
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .extension__title {
@@ -15,7 +21,24 @@
 }
 
 .extension__container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1150px) {
+    .extension__title {
+       font-size: 2rem;
+    }
+
+    .extension__text {
+        font-size: 1rem;
+    }
+
+    .extension__container {
+        position: relative;
+        height: 25rem;
+    }
 }

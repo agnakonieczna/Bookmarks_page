@@ -46,3 +46,28 @@
   .footer__links a:last-child {
     margin-left: 1rem;
   }
+
+  @media (min-width: 1150px) {
+      .footer .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+
+      .footer__logo {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          margin-right: 1rem;
+      }
+
+      .footer__flex {
+          display: flex;
+          align-items: center;
+      }
+
+      .footer__item {
+          display: inline-block;
+          margin-right: 1rem;
+      }
+  }

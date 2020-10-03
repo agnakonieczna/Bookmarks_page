@@ -10,6 +10,21 @@ class Newsletter extends React.Component {
     };
   }
 
+  componentDidMount() {
+   
+    const numberCountDown = setInterval(() => {
+      this.setState({
+        number: this.state.number - 50
+      })
+      if(this.state.number <= 0 ) {
+        clearInterval(numberCountDown)
+      }
+    }, 30); 
+  }
+
+  componentWillUnmount() {
+  }
+
   submit = (e) => {
     e.preventDefault();
 
@@ -38,25 +53,28 @@ class Newsletter extends React.Component {
             {this.state.number}+ already joined
           </p>
           <h3 className='newsletter__title'>
-            Stay up to date with what we're doing
+            Stay up-to-date with what we're doing
           </h3>
           <form className='newsletter__form' onSubmit={this.submit}>
-            <input
-              className={
-                this.state.emailErr
-                  ? "newsletter__input newsletter__input-error"
-                  : "newsletter__input"
-              }
-              type='text'
-              value={this.state.email}
-              onChange={(e) => this.setState({ email: e.target.value })}
-              placeholder='Enter your email address'
-            ></input>
-            {this.state.emailErr && (
-              <div className='newsletter__error'>
-                <em>{this.state.emailErr}</em>
-              </div>
-            )}
+            <div className='newsletter__flex'>
+              <input
+                className={
+                  this.state.emailErr
+                    ? "newsletter__input newsletter__input-error"
+                    : "newsletter__input"
+                }
+                type='text'
+                value={this.state.email}
+                onChange={(e) => this.setState({ email: e.target.value })}
+                placeholder='Enter your email address'
+              ></input>
+              {this.state.emailErr && (
+                <div className='newsletter__error'>
+                  <em>{this.state.emailErr}</em>
+                </div>
+              )}
+            </div>
+
             <button className='newsletter__btn' type='submit'>
               Contact Us
             </button>
