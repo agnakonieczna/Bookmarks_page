@@ -28,12 +28,12 @@ function Footer() {
           </ul>
         </div>
 
-        <div className='footer__links'>
-          <a href='https://www.facebook.com/'>
-            <img src={facebook} alt='facebook-icon' />
+        <div className='footer__social-media'>
+          <a className='footer__social-media__link' href='https://www.facebook.com/'>
+            <img className='footer__social-media__img' src={facebook} alt='facebook-icon' />
           </a>
-          <a href='https://twitter.com/'>
-            <img src={twitter} alt='twitter-icon' />
+          <a className='footer__social-media__link' href='https://twitter.com/'>
+            <img className='footer__social-media__img' src={twitter} alt='twitter-icon' />
           </a>
         </div>
       </div>

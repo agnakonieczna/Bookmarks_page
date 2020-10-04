@@ -15,6 +15,8 @@
   max-width: 25rem;
   text-align: center;
   line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .banner__title {
@@ -39,10 +41,10 @@
 }
 
 @media (min-width: 1150px) {
-  .banner {
+  .banner .container {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 25rem 2rem 1fr;
     grid-template-rows: 100%;
   }
 
@@ -50,10 +52,14 @@
     grid-column: 1/2;
     grid-row: 1/2;
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .banner__hero {
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 1/2;
     margin: 0;
   }
@@ -67,13 +73,27 @@
     font-size: 1rem;
   }
 
-  .banner__btn:first-of-type {
+  .banner__btn-1 {
     margin-left: 0;
     margin-right: 0.5rem;
+    transition: 0.5s;
+
+    &:hover {
+      color: $main-color-1;
+      background-color: #fff;
+      border: 0.1rem solid $main-color-1;
+    }
   }
 
-  .banner__btn:last-of-type {
+  .banner__btn-2 {
     margin-right: 0;
     margin-left: 0.5rem;
+    transition: 0.5s;
+
+    &:hover {
+      color: darken($addtional-color-1, 10%);
+      background-color: #fff;
+      border: 0.1rem solid darken($addtional-color-1, 10%);
+    }
   }
 }

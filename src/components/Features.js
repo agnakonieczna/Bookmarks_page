@@ -40,7 +40,9 @@ class Features extends React.Component {
               </p>
             </div>
             <button
-              className='features__btn'
+              className={
+                this.state.btn1 ? "features__btn red-border" : "features__btn"
+              }
               onClick={() => {
                 this.setState({ btn1: true, btn2: false, btn3: false });
               }}
@@ -49,7 +51,9 @@ class Features extends React.Component {
             </button>
             {this.state.btn1 && <span className='red-line'></span>}
             <button
-              className='features__btn'
+              className={
+                this.state.btn2 ? "features__btn red-border" : "features__btn"
+              }
               onClick={() => {
                 this.setState({ btn1: false, btn2: true, btn3: false });
               }}
@@ -58,7 +62,9 @@ class Features extends React.Component {
             </button>
             {this.state.btn2 && <span className='red-line'></span>}
             <button
-              className='features__btn'
+              className={
+                this.state.btn3 ? "features__btn red-border" : "features__btn features__btn-3"
+              }
               onClick={() => {
                 this.setState({ btn1: false, btn2: false, btn3: true });
               }}

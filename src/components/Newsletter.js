@@ -11,7 +11,6 @@ class Newsletter extends React.Component {
   }
 
   componentDidMount() {
-   
     const numberCountDown = setInterval(() => {
       this.setState({
         number: this.state.number - 50
@@ -20,9 +19,6 @@ class Newsletter extends React.Component {
         clearInterval(numberCountDown)
       }
     }, 30); 
-  }
-
-  componentWillUnmount() {
   }
 
   submit = (e) => {

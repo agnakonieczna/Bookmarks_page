@@ -30,7 +30,7 @@ class Header extends React.Component {
       <>
         <header className='header'>
           <div className='container'>
-            <div className='header__row'>
+            <div className='header__flex'>
               <img className='logo' src={this.state.logo} alt='company-logo' />
               <button className='hamburger' onClick={this.showMenu}>
                 <img src={this.state.btnIcon} alt='menu'></img>
@@ -53,18 +53,18 @@ class Header extends React.Component {
                     Contact
                   </a>
                 </li>
-                <li className='nav__item'>
-                  <a href='#login' className='nav__link'>
+                <li className='nav__item nav__item-login'>
+                  <a href='#login' className='nav__link nav__link-login'>
                     Login
                   </a>
                 </li>
               </ul>
-              <div className='nav__links'>
-                <a href='https://www.facebook.com/'>
-                  <img src={facebook} alt='facebook-icon' />
+              <div className='nav__social-media'>
+                <a className='nav__social-media__link' href='https://www.facebook.com/'>
+                  <img className='nav__social-media__img' src={facebook} alt='facebook-icon' />
                 </a>
-                <a href='https://twitter.com/'>
-                  <img src={twitter} alt='twitter-icon' />
+                <a className='nav__social-media__link' href='https://twitter.com/'>
+                  <img className='nav__social-media__img' src={twitter} alt='twitter-icon' />
                 </a>
               </div>
             </nav>

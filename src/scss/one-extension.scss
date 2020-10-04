@@ -11,7 +11,7 @@
 }
 
 .one-extension__logo {
-    margin-top: 2rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -33,6 +33,16 @@
 }
 
 @media (min-width: 1150px) {
+  .one-extension__btn {
+    transition: 0.5s;
+
+    &:hover {
+      color: $main-color-1;
+      background-color: #fff;
+      border: 0.1rem solid $main-color-1;
+    }
+  }
+  
   .one-extension {
     position: absolute;
     top: 0;
@@ -50,6 +60,4 @@
     top: 20%;
     left: 63%;
   }
-
-
 }

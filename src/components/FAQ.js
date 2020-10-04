@@ -1,5 +1,6 @@
 import React from "react";
-import arrow from "../assets/images/icon-arrow.svg";
+import arrow1 from "../assets/images/icon-arrow.svg";
+import arrow2 from "../assets/images/red-arrow.svg";
 
 class FAQ extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class FAQ extends React.Component {
   render() {
     return (
       <section className='faq' id='faq'>
-        <div className='container'> 
+        <div className='container'>
           <div className='faq__content'>
             <h3 className='faq__title'>Frequently Asked Questions</h3>
             <p className='faq__text'>
@@ -35,18 +36,28 @@ class FAQ extends React.Component {
             </p>
             <div className='faq__container'>
               <button className='faq__btn' id='btn1' onClick={this.seeAnswear}>
-                What is bookmark?<img src={arrow} alt=''></img>
+                What is bookmark?
+                <img
+                  className={this.state.btn1 ? "arrow-rotate" : ""}
+                  src={this.state.btn1 ? arrow2 : arrow1}
+                  alt=''
+                ></img>
               </button>
               {this.state.btn1 && (
                 <p className='faq__answer'>
                   Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum
-                  lorem ipsum{" "}
+                  lorem ipsum.
                 </p>
               )}
             </div>
             <div className='faq__container'>
               <button className='faq__btn' onClick={this.seeAnswear} id='btn2'>
-                How can I request a new browser?<img src={arrow} alt=''></img>
+                How can I request a new browser?
+                <img
+                  className={this.state.btn1 ? "arrow-rotate" : ""}
+                  src={this.state.btn2 ? arrow2 : arrow1}
+                  alt=''
+                ></img>
               </button>
               {this.state.btn2 && (
                 <p className='faq__answer'>Lorem ipsum lorem ipsum</p>
@@ -54,7 +65,12 @@ class FAQ extends React.Component {
             </div>
             <div className='faq__container'>
               <button className='faq__btn' onClick={this.seeAnswear} id='btn3'>
-                Is there a mobile app?<img src={arrow} alt=''></img>
+                Is there a mobile app?
+                <img
+                  className={this.state.btn1 ? "arrow-rotate" : ""}
+                  src={this.state.btn3 ? arrow2 : arrow1}
+                  alt=''
+                ></img>
               </button>
               {this.state.btn3 && (
                 <p className='faq__answer'>Lorem ipsum lorem ipsum</p>
@@ -62,7 +78,12 @@ class FAQ extends React.Component {
             </div>
             <div className='faq__container'>
               <button className='faq__btn' onClick={this.seeAnswear} id='btn4'>
-                What about Chromium browsers?<img src={arrow} alt=''></img>
+                What about Chromium browsers?
+                <img
+                  className={this.state.btn1 ? "arrow-rotate" : ""}
+                  src={this.state.btn4 ? arrow2 : arrow1}
+                  alt=''
+                ></img>
               </button>
               {this.state.btn4 && (
                 <p className='faq__answer'>Lorem ipsum lorem ipsum</p>
