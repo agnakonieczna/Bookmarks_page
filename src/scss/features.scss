@@ -46,17 +46,12 @@
   margin-top: 0;
 }
 
-// .red-border {
-//   border-bottom: none;
-// }
-
 
 @media (min-width: 1150px) {
   .features__btn {
     width: 25%;
     border: none;
     border-bottom: 0.01rem solid $addtional-color-1;
-    position: relative;
     font-size: 1rem;
     transition: 0.5s;
 
@@ -73,11 +68,27 @@
     font-size: 1rem;
   }
 
-  // .red-border {
-  //   border-bottom: 0.2rem solid $main-color-2;
-  // }
+  .features__flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features__btn-wrapper {
+    width: 15rem;
+    position: relative;
+  }
+
+  .features__btn { 
+    width: 100%;
+  }
 
   .red-line {
-    display: none;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 95%;
+    left: 0;
   }
 }

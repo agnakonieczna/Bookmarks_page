@@ -6,17 +6,40 @@ function Baner() {
     <>
       <section className='banner'>
         <div className='container'>
-          <img className='banner__hero' src={hero} alt='company-logo' />
-          {/* <line
-              x1='400'
-              x2='700'
-              y1='300'
-              y2='300'
-              stroke-width='320'
-              stroke-height='200'
-              stroke-linecap='round'
-              stroke='#5368df'
-            /> */}
+          <div className='banner__img-wrapper'>
+            <img className='banner__hero' src={hero} alt='company-logo' />
+            <svg
+              className='svg-bg'
+              xmlns='http://www.w3.org/2000/svg'
+              width='600'
+              height='700'
+              preserveAspectRatio='xMidYMid meet'
+            >
+              <g>
+                <rect
+                  x='200'
+                  y='300'
+                  rx='100'
+                  ry='100'
+                  width='500'
+                  height='200'
+                  stroke='#5368df'
+                  fill='#5368df'
+                  stroke-width='250'
+                  strokeLinecap='round'
+                />
+              </g>
+              {/* <line
+                x1='400'
+                x2='850'
+                y1='420'
+                y2='420'
+                strokeWidth='400'
+                strokeLinecap='round'
+                stroke='#5368df'
+              /> */}
+            </svg>
+          </div>
           <div className='banner__content'>
             <h1 className='banner__title'>A Simple Bookmark Manager</h1>
             <p className='banner__text'>

@@ -34,7 +34,7 @@
   padding: 2rem 0;
 }
 
-.footer__social-media__img {
+.footer__social-media__svg {
   width: 1.25rem;
 }
 
@@ -57,7 +57,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   .footer__flex {
@@ -68,7 +68,7 @@
 
   .footer__item {
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   .footer__link {
@@ -79,11 +79,11 @@
     }
   }
 
-  .footer__social-media__link {
+  .footer__social-media__svg {
     transition: 0.5s;
 
     &:hover {
-      color: $main-color-2;
+      fill: $main-color-2;
     }
   }
 }

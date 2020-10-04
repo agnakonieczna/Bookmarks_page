@@ -1,27 +1,46 @@
 import React from "react";
-import arrow1 from "../assets/images/icon-arrow.svg";
-import arrow2 from "../assets/images/red-arrow.svg";
+import OneQuestion from "./OneQuestion";
+
+const data = [
+  {
+    id: "btn1",
+    btnQuestion: "What is bookmark?",
+    btnAnswear:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+  },
+  {
+    id: "btn2",
+    btnQuestion: "How can I request a new browser?",
+    btnAnswear:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+  },
+  {
+    id: "btn3",
+    btnQuestion: "Is there a mobile app?",
+    btnAnswear:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+  },
+  {
+    id: "btn4",
+    btnQuestion: "Is there a mobile app?",
+    btnAnswear:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+  },
+];
 
 class FAQ extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      btn1: false,
-      btn2: false,
-      btn3: false,
-      btn4: false,
-    };
+      activeBtn: ''
+    }
   }
 
   seeAnswear = (e) => {
-    this.setState(
-      {
-        [e.target.id]: this.state[e.target.id] ? false : true,
-      },
-      () => {
-        console.log(this.state.btn1);
-      }
-    );
+    const newId = this.state.activeBtn === e.target.id ? "" : e.target.id;
+    this.setState ({
+      activeBtn: newId
+    })
   };
 
   render() {
@@ -34,67 +53,26 @@ class FAQ extends React.Component {
               Here are some of our FAQs. If you have any other questions you'd
               like answered please feel free to email us.
             </p>
-            <div className='faq__container'>
-              <button className='faq__btn' id='btn1' onClick={this.seeAnswear}>
-                What is bookmark?
-                <img
-                  className={this.state.btn1 ? "arrow-rotate" : ""}
-                  src={this.state.btn1 ? arrow2 : arrow1}
-                  alt=''
-                ></img>
-              </button>
-              {this.state.btn1 && (
-                <p className='faq__answer'>
-                  Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum
-                  lorem ipsum.
-                </p>
-              )}
-            </div>
-            <div className='faq__container'>
-              <button className='faq__btn' onClick={this.seeAnswear} id='btn2'>
-                How can I request a new browser?
-                <img
-                  className={this.state.btn1 ? "arrow-rotate" : ""}
-                  src={this.state.btn2 ? arrow2 : arrow1}
-                  alt=''
-                ></img>
-              </button>
-              {this.state.btn2 && (
-                <p className='faq__answer'>Lorem ipsum lorem ipsum</p>
-              )}
-            </div>
-            <div className='faq__container'>
-              <button className='faq__btn' onClick={this.seeAnswear} id='btn3'>
-                Is there a mobile app?
-                <img
-                  className={this.state.btn1 ? "arrow-rotate" : ""}
-                  src={this.state.btn3 ? arrow2 : arrow1}
-                  alt=''
-                ></img>
-              </button>
-              {this.state.btn3 && (
-                <p className='faq__answer'>Lorem ipsum lorem ipsum</p>
-              )}
-            </div>
-            <div className='faq__container'>
-              <button className='faq__btn' onClick={this.seeAnswear} id='btn4'>
-                What about Chromium browsers?
-                <img
-                  className={this.state.btn1 ? "arrow-rotate" : ""}
-                  src={this.state.btn4 ? arrow2 : arrow1}
-                  alt=''
-                ></img>
-              </button>
-              {this.state.btn4 && (
-                <p className='faq__answer'>Lorem ipsum lorem ipsum</p>
-              )}
-            </div>
+            {data.map((question) => {
+              return (
+                <OneQuestion
+                  key={question.id}
+                  id={question.id}
+                  btn={this.state.activeBtn === question.id}
+                  question={question.btnQuestion}
+                  answear={question.btnAnswear}
+                  seeAnswear={this.seeAnswear}
+                />
+              );
+            })}
             <button className='faq__btn-more-info'>More Info</button>
           </div>
         </div>
       </section>
     );
+
   }
-}
+  
+};
 
 export default FAQ;

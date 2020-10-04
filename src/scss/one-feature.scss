@@ -1,12 +1,14 @@
 .one-feature {
-    position: relative;
+  position: relative;
 }
 
 .one-feature__img {
-    margin-top: 3rem;
-    width: 85%;
-    margin-bottom: 4rem;
-    z-index: 2;
+  margin-top: 3rem;
+  width: 85%;
+  margin-bottom: 4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // .one-feature__svg-bg {
@@ -17,63 +19,70 @@
 // }
 
 .one-feature__content {
-    max-width: 25rem;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .one-feature__title {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .one-feature__text {
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
-    color: $addtional-color-1;
-    line-height: 1.5;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  color: $addtional-color-1;
+  line-height: 1.5;
 }
 
 .one-feature__btn {
-    @include main-btn;
-    display: none;
+  @include main-btn;
+  display: none;
+}
+
+.modal .one-feature__content {
+  z-index: 1;
+}
+
+.modal .one-feature__img {
+  width: 80%;
+  z-index: 2;
 }
 
 @media (min-width: 1150px) {
-    .one-feature .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100%;
-    }
+  .one-feature .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+  }
 
-    .one-feature__img {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
+  .one-feature__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 
-    .one-feature__content {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        font-size: 1rem;
-        text-align: start;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .one-feature__content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 1rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .one-feature__title {
-        align-self: flex-start;
-        font-size: 2rem;
-    }
+  .one-feature__title {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
 
-    .one-feature__text {
-        font-size: 1rem;
-    }
+  .one-feature__text {
+    font-size: 1rem;
+  }
 
-    .one-feature__btn {
-        display: block;
-        align-self: flex-start;
-    }
-
-    
+  .one-feature__btn {
+    display: block;
+    align-self: flex-start;
+  }
 }

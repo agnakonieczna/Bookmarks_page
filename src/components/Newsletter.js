@@ -13,12 +13,12 @@ class Newsletter extends React.Component {
   componentDidMount() {
     const numberCountDown = setInterval(() => {
       this.setState({
-        number: this.state.number - 50
+        number: this.state.number - 175
       })
       if(this.state.number <= 0 ) {
         clearInterval(numberCountDown)
       }
-    }, 30); 
+    }, 100); 
   }
 
   submit = (e) => {

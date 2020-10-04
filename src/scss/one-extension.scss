@@ -42,22 +42,25 @@
       border: 0.1rem solid $main-color-1;
     }
   }
-  
+
   .one-extension {
     position: absolute;
     top: 0;
-    left: 15%;
+    left: 25%;
+    transform: translateX(-50%);
   }
 
   .one-extension:nth-child(2) {
     position: absolute;
     top: 10%;
-    left: 39%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .one-extension:last-child {
     position: absolute;
     top: 20%;
-    left: 63%;
+    left: 75%;
+    transform: translateX(-50%);
   }
 }
