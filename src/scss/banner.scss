@@ -6,19 +6,24 @@
   flex-direction: column;
 }
 
+.banner__img-wrapper {
+  width: 100%;
+  position: relative;
+}
+
 .banner__hero {
   width: 100%;
   margin-bottom: 2rem;
-  position: relative;
   z-index: 1;
 }
 
-.svg-bg {
+.banner__svg-bg {
+  width: 100%;
   position: absolute;
-  top: 0;
-  left: 20%;
+  top: 15%;
+  right: -25%;
+  z-index: -1;
 }
-
 
 .banner__content {
   max-width: 25rem;
@@ -78,9 +83,9 @@
     margin: 0;
   }
 
-  .svg-bg {
-    top: 10%;
-    left: 60%;
+  .banner__svg-bg {
+    top: 25%;
+    right: -35%;
   }
 
   .banner__hero {

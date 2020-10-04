@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Baner from "./Baner";
+import Banner from "./Banner";
 import Features from "./Features";
 import Extensions from "./Extensions";
 import FAQ from "./FAQ";
@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <>
       <Header />
-      <Baner />
+      <Banner />
       <Features />
       <Extensions />
       <FAQ />
