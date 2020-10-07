@@ -3,7 +3,7 @@ import svgBg from "../assets/images/svg-bg.svg";
 
 function OneFeature({ img, title, text }) {
   return (
-    <div className='one-feature'>
+    <article className='one-feature'>
       <div className='container'>
         <div className='one-feature__img-wrapper'>
           <img className='one-feature__img' alt={title} src={img} />
@@ -15,7 +15,7 @@ function OneFeature({ img, title, text }) {
           <button className='one-feature__btn'>More info</button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

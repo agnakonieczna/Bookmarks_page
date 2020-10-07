@@ -71,13 +71,13 @@ class Header extends React.Component {
           <div className='container'>
             <div className='header__flex'>
               <img className='logo' src={this.state.logo} alt='company-logo' />
-              <button className='hamburger' onClick={this.showMenu}>
+              <button className='hamburger' onClick={this.showMenu} aria-label='Open the menu'>
                 <img
                   src={this.state.btnIcon}
                   alt={
                     this.state.btnIcon === hamburgerOpen
-                      ? "open-menu"
-                      : "close-btn"
+                      ? "open-menu-btn"
+                      : "close-menu-btn"
                   }
                 ></img>
               </button>
@@ -131,8 +131,8 @@ class Header extends React.Component {
             {this.state.isModalOpen && (
               <>
                 <div className='modal'>
-                  <button className='modal__btn' onClick={this.closeModal}>
-                    <img src={closeModal} alt='close-modal'></img>
+                  <button className='modal__btn' onClick={this.closeModal} aria-label='Close modal'>
+                    <img src={closeModal} alt='close-modal-btn'></img>
                   </button>
                   <OneFeature
                     className='modal__content'

@@ -13,23 +13,20 @@ class Newsletter extends React.Component {
   componentDidMount() {
     const numberCountDown = setInterval(() => {
       this.setState({
-        number: this.state.number - 175
-      })
-      if(this.state.number <= 0 ) {
-        clearInterval(numberCountDown)
+        number: this.state.number - 175,
+      });
+      if (this.state.number <= 0) {
+        clearInterval(numberCountDown);
       }
-    }, 100); 
+    }, 100);
   }
 
   submit = (e) => {
     e.preventDefault();
 
-    function validateEmail(email) {
-      const re = /\S+@\S+\.\S+/;
-      return re.test(email);
-    }
+    const re = /\S+@\S+\.\S+/;
 
-    if (!this.state.email || !validateEmail(this.state.email)) {
+    if (!this.state.email || !re.test(this.state.email)) {
       this.setState({
         emailErr: "Whoops make sure it's an email",
       });

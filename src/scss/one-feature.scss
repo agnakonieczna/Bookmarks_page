@@ -5,7 +5,7 @@
 .one-feature__img {
   margin-top: 3rem;
   width: 85%;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -20,7 +20,7 @@
   transform: rotate(180deg);
   width: 100%;
   position: absolute;
-  top: 15%;
+  top: 3%;
   left: -25%;
   z-index: -1;
 }
@@ -32,7 +32,7 @@
 }
 
 .one-feature__title {
-  margin-top: 4rem;
+  // margin-top: 5rem;
   margin-bottom: 1rem;
 }
 
@@ -83,7 +83,7 @@
   }
 
   .one-feature__svg-bg {
-    top: 25%;
+    top: 14%;
     left: -30%;
     z-index: -1;
   }
