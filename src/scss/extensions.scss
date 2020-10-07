@@ -3,23 +3,6 @@
     padding-top: 6rem;
 }
 
-.extension__content {
-    max-width: 25rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.extension__title {
-    margin-bottom: 1rem;
-}
-
-.extension__text {
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
-    color: $addtional-color-1;
-    line-height: 1.5;
-}
-
 .extension__container {
     width: 100%;
     display: flex;
@@ -29,14 +12,6 @@
 }
 
 @media (min-width: 1150px) {
-    .extension__title {
-       font-size: 2rem;
-    }
-
-    .extension__text {
-        font-size: 1rem;
-    }
-
     .extension__container {
         position: relative;
         height: 27rem;

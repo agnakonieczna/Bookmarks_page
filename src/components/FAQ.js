@@ -1,6 +1,10 @@
 import React from "react";
 import OneQuestion from "./OneQuestion";
+import SimpleText from "./SimpleText";
 
+const title = "Frequently Asked Questions";
+const text =
+  "Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.";
 const data = [
   {
     id: "btn1",
@@ -28,31 +32,28 @@ const data = [
   },
 ];
 
+
 class FAQ extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      activeBtn: ''
-    }
+      activeBtn: "",
+    };
   }
 
   seeAnswear = (e) => {
     const newId = this.state.activeBtn === e.target.id ? "" : e.target.id;
-    this.setState ({
-      activeBtn: newId
-    })
+    this.setState({
+      activeBtn: newId,
+    });
   };
 
   render() {
     return (
       <section className='faq' id='faq'>
         <div className='container'>
+          <SimpleText title={title} text={text} />
           <div className='faq__content'>
-            <h3 className='faq__title'>Frequently Asked Questions</h3>
-            <p className='faq__text'>
-              Here are some of our FAQs. If you have any other questions you'd
-              like answered please feel free to email us.
-            </p>
             {data.map((question) => {
               return (
                 <OneQuestion
@@ -70,9 +71,7 @@ class FAQ extends React.Component {
         </div>
       </section>
     );
-
   }
-  
-};
+}
 
 export default FAQ;

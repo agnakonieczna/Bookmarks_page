@@ -4,8 +4,8 @@ import arrow2 from "../assets/images/red-arrow.svg";
 
 function OneQuestion({id, btn, question, answear, seeAnswear}) {
     return(
-        <div className='faq__container'>
-        <button className='faq__btn' onClick={seeAnswear} id={id}>
+        <div className='one-question__container'>
+        <button className='one-question__btn' onClick={seeAnswear} id={id}>
           {question}
           <img
             className={btn ? "arrow-rotate" : ""}
@@ -14,7 +14,7 @@ function OneQuestion({id, btn, question, answear, seeAnswear}) {
           ></img>
         </button>
         {btn && (
-          <p className='faq__answer'>{answear}</p>
+          <p className='one-question__answer'>{answear}</p>
         )}
       </div>
     )

@@ -3,6 +3,10 @@ import img1 from "../assets/images/illustration-features-tab-1.svg";
 import img2 from "../assets/images/illustration-features-tab-2.svg";
 import img3 from "../assets/images/illustration-features-tab-3.svg";
 import OneFeature from "./OneFeature";
+import SimpleText from "./SimpleText";
+
+const title = "Features";
+const text = "  Our aim is to make quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."
 
 const title1 = "Bookmark in one click";
 const text1 =
@@ -18,7 +22,7 @@ class Features extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      activeBtn: "btn1",
+      activeBtn: 'btn1',
     };
   }
 
@@ -27,14 +31,7 @@ class Features extends React.Component {
       <>
         <section className='features' id='features'>
           <div className='container'>
-            <div className='features__content'>
-              <h3 className='features__title'>Features</h3>
-              <p className='features__text'>
-                Our aim is to make quick and easy for you to access your
-                favourite websites. Your bookmarks sync between your devices so
-                you can access them on the go.
-              </p>
-            </div>
+            <SimpleText title={title} text={text} />
             <div className='features__flex'>
               <div className='features__btn-wrapper'>
                 <button
